@@ -23,7 +23,7 @@ export default function HomePage() {
           </h1>
           
           <p className="text-lg md:text-xl text-slate-600 dark:text-slate-400 mb-12 max-w-2xl mx-auto leading-relaxed">
-            Belajar skill IT dari nol, bangun portfolio nyata, dan dapatkan bimbingan langsung dari expert industri. Dirancang khusus untuk talenta masa depan.
+            Belajar skill Digital dari nol, bangun portfolio nyata, dan dapatkan bimbingan langsung dari expert industri. Dirancang khusus untuk talenta masa depan.
           </p>
           
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
