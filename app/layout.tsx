@@ -6,7 +6,7 @@ import Image from 'next/image'; // TAMBAHAN
 import { Mail, Phone, MapPin } from 'lucide-react'; // Instagram dihapus
 
 export const metadata: Metadata = {
-  title: 'NgodingAI By Inovasia',
+  title: 'Inovasia Digital Academy',
   description: 'Kursus AI coding terdepan di Indonesia untuk developer yang ingin bebas dari coding manual.',
 };
 
@@ -33,14 +33,13 @@ export default function RootLayout({
               <div className="md:col-span-5 space-y-5">
                 <div className="flex items-center gap-3">
                   {/* TAMBAHAN: Menggunakan komponen Image */}
-                  <Image src="/logongodingai.png" alt="NgodingAI Logo" width={40} height={40} className="w-10 h-10 object-contain" />
+                  <Image src="/logo.png" alt="NgodingAI Logo" width={40} height={40} className="w-10 h-10 object-contain" />
                   <div>
-                    <h3 className="text-xl font-bold text-white leading-none">NgodingAI By Inovasia</h3>
-                    <p className="text-sm text-slate-400 mt-1">Ngoding Tanpa Batas!</p>
+                    <h3 className="text-xl font-bold text-white leading-none">Digital Academy</h3>
                   </div>
                 </div>
                 <p className="text-slate-400 text-sm leading-relaxed pr-4">
-                  Kursus AI coding terdepan di Indonesia untuk developer yang ingin bebas dari coding manual.
+                  Belajar skill Digital dari nol, bangun portfolio nyata, dan dapatkan bimbingan langsung dari expert industri. Dirancang khusus untuk talenta masa depan.
                 </p>
               </div>
 
@@ -48,15 +47,7 @@ export default function RootLayout({
               <div className="md:col-span-4">
                 <h4 className="text-lg font-bold text-white mb-6">Kontak</h4>
                 <ul className="space-y-4 text-sm text-slate-400">
-                  <li className="flex items-start gap-3">
-                    {/* TAMBAHAN: Menggunakan SVG manual agar tidak error dari lucide-react */}
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="shrink-0 text-slate-500">
-                      <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
-                      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                      <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
-                    </svg>
-                    <a href="https://instagram.com/ngodingai" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">@ngodingai</a>
-                  </li>
+                  
                   <li className="flex items-start gap-3">
                     <Mail className="w-5 h-5 shrink-0 text-slate-500" />
                     <a href="mailto:course@inovasia.co.id" className="hover:text-blue-400 transition-colors">course@inovasia.co.id</a>
@@ -87,7 +78,7 @@ export default function RootLayout({
 
             {/* Copyright */}
             <div className="pt-8 border-t border-slate-800/80 text-center text-sm text-slate-500">
-              © 2025 NgodingAI by Inovasia Digital Academy.
+              © 2026 Inovasia Digital Academy.
             </div>
           </div>
         </footer>
@@ -103,7 +94,7 @@ export default function RootLayout({
           {/* Mengabaikan warning next/image khusus untuk gambar eksternal WA ini */}
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img 
-            src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
+            src="/logo_wa.png" 
             alt="WhatsApp Icon" 
             className="w-14 h-14" 
           />
