@@ -2,8 +2,11 @@ import type { Metadata } from 'next';
 import './globals.css';
 import Navbar from '@/components/Navbar';
 import Link from 'next/link';
-import Image from 'next/image'; // TAMBAHAN
-import { Mail, Phone, MapPin } from 'lucide-react'; // Instagram dihapus
+import Image from 'next/image';
+import { Mail, Phone, MapPin } from 'lucide-react'; 
+
+// Ganti baris import yang lama menjadi ini:
+import { FloatingWhatsApp } from '@/components/FloatingWhatsApp';
 
 export const metadata: Metadata = {
   title: 'Inovasia Digital Academy',
@@ -24,15 +27,13 @@ export default function RootLayout({
         <Navbar />
         <main>{children}</main>
         
-        {/* CUSTOM FOOTER BARU */}
+        {/* CUSTOM FOOTER */}
         <footer className="bg-[#0B1120] text-slate-300 py-16 border-t border-slate-800/80">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-12 gap-12 mb-12">
               
-              {/* Kolom 1: Brand (Lebih lebar) */}
               <div className="md:col-span-5 space-y-5">
                 <div className="flex items-center gap-3">
-                  {/* TAMBAHAN: Menggunakan komponen Image */}
                   <Image src="/logo.png" alt="NgodingAI Logo" width={40} height={40} className="w-10 h-10 object-contain" />
                   <div>
                     <h3 className="text-xl font-bold text-white leading-none">Digital Academy</h3>
@@ -43,11 +44,9 @@ export default function RootLayout({
                 </p>
               </div>
 
-              {/* Kolom 2: Kontak */}
               <div className="md:col-span-4">
                 <h4 className="text-lg font-bold text-white mb-6">Kontak</h4>
                 <ul className="space-y-4 text-sm text-slate-400">
-                  
                   <li className="flex items-start gap-3">
                     <Mail className="w-5 h-5 shrink-0 text-slate-500" />
                     <a href="mailto:course@inovasia.co.id" className="hover:text-blue-400 transition-colors">course@inovasia.co.id</a>
@@ -63,7 +62,6 @@ export default function RootLayout({
                 </ul>
               </div>
 
-              {/* Kolom 3: Kursus */}
               <div className="md:col-span-3">
                 <h4 className="text-lg font-bold text-white mb-6">Kursus</h4>
                 <ul className="space-y-3 text-sm text-slate-400">
@@ -76,29 +74,14 @@ export default function RootLayout({
 
             </div>
 
-            {/* Copyright */}
             <div className="pt-8 border-t border-slate-800/80 text-center text-sm text-slate-500">
               © 2026 Inovasia Digital Academy.
             </div>
           </div>
         </footer>
 
-        {/* FLOATING WHATSAPP BUTTON */}
-        <a 
-          href="https://wa.me/6287760759450" 
-          target="_blank" 
-          rel="noopener noreferrer" 
-          className="fixed bottom-6 right-6 z-50 hover:scale-110 transition-transform duration-300 drop-shadow-xl"
-          aria-label="Hubungi kami via WhatsApp"
-        >
-          {/* Mengabaikan warning next/image khusus untuk gambar eksternal WA ini */}
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img 
-            src="/logo_wa.png" 
-            alt="WhatsApp Icon" 
-            className="w-14 h-14" 
-          />
-        </a>
+        {/* PANGGIL KOMPONEN FLOATING WA DI SINI */}
+        <FloatingWhatsApp/>
 
       </body>
     </html>
